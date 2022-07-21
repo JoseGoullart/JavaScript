@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Onde você nasceu?</h1>
+    <input type="text" value="digite aqui seu pais"name="nascimento" id="nasc">
+    <input type="button" value="verificador" id="calc" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular(){
+            var pais = window.document.querySelector('input#nasc')
+            var nacionalidade = String(pais.value)
+            var res = window.document.querySelector('div#res')
+            if (nacionalidade == 'brasil') {
+                 res.innerText = "vivendo em ${pais.}, vocé é brasileiro"
+            }else{ 
+                res.innerText = 'vivendo em ${pais}, você é estrangeiro'
+            }                
+        }
+    </script>
+</body>
+</html>
